@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Movie Showtime"
+include ':app'
+include ':firstscreen:firstscreen_presentation'
+include ':secondscreen:secondscreen_presentation'
+include ':common:common_utils'
+include ':core'

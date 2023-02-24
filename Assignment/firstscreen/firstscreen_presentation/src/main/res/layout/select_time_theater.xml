@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vm"
+            type="com.amit.bms.firstscreen_presentation.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTheaterName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/concert_one"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_baseline_favorite_border_24"
+            app:layout_constraintBottom_toTopOf="@+id/showTimeRv"
+            app:layout_constraintStart_toStartOf="@+id/showTimeRv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="PVR: Inorbit, Cyberabad" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/showTimeRv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTheaterName"
+            tools:listitem="@layout/item_show_time" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#C62222"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/showTimeRv"
+            app:layout_constraintTop_toBottomOf="@+id/showTimeRv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="ok">Ok</string>
+    <string name="cd_previous">Previous</string>
+    <string name="cd_next">Next</string>
+    <string name="movie">Movie</string>
+    <string name="confirmed">Booking confirmed</string>
+    <string name="enjoy_show">Enjoy your show</string>
+</resources>
